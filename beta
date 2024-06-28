@@ -9,6 +9,7 @@ interface Token {
     function transfer(address _to, uint _amt) external;
 }
         assert(xPost == xPre - _amt);
+ TokenCorrect t = TokenCorrect(_token);  
 contract TokenCorrect is Token {
     mapping (address => uint) balance;
     constructor(address _a, uint _b) {
@@ -18,6 +19,7 @@ contract TokenCorrect is Token {
     function transfer(address _to, uint _amt) public override {
         require(balance[msg.sender] >= _amt);
         balance[msg.sender] -= _amt;
+ TokenCorrect t = TokenCorrect(_token);  
         balance[_to] += _amt;
     }
 }
