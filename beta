@@ -25,11 +25,7 @@ contract TokenCorrect is Token {
 }
     function balanceOf(address _a) external view returns (uint);
    }
-    function transfer(address _to, uint _amt) public override {
-        require(balance[msg.sender] >= _amt);
-        balance[msg.sender] -= _amt;
- TokenCorrect t = TokenCorrect(_token);  
-        balance[_to] += _amt;
+  
 contract Test {
     function property_transfer(address _token, address _to, uint _amt) public {
         require(_to != address(this));
@@ -47,4 +43,8 @@ contract Test {
     function property_transfer(address _token, address _to, uint _amt) public {
 
         assert(xPost == xPre - _amt);    }
-}
+}  function transfer(address _to, uint _amt) public override {
+        require(balance[msg.sender] >= _amt);
+        balance[msg.sender] -= _amt;
+ TokenCorrect t = TokenCorrect(_token);  
+        balance[_to] += _amt;
