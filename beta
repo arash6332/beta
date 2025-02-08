@@ -1,13 +1,7 @@
 for github
 
 
-// SPDX-License-Identifier: GPL-3.0
-pragma solidity >=0.8.0;
-
-interface Token {
-   
-}
-        assert(xPost == xPre - _amt);
+assert(xPost == xPre - _amt);
  TokenCorrect t = TokenCorrect(_token);  
 contract TokenCorrect is Token {
     mapping (address => uint) balance;
@@ -21,7 +15,13 @@ contract TokenCorrect is Token {
  TokenCorrect t = TokenCorrect(_token);  
         balance[_to] += _amt;
     }
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.8.0;
+
+interface Token {
+   
 }
+        
     function balanceOf(address _a) external view returns (uint);
    }
    function balanceOf(address _a) external view returns (uint);
