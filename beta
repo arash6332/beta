@@ -1,13 +1,7 @@
 for github
 
 
-assert(xPost == xPre - _amt);
- TokenCorrect t = TokenCorrect(_token);  
-contract TokenCorrect is Token {
-    mapping (address => uint) balance;
-    constructor(address _a, uint _b) {
-    function balanceOf(address _a) public view override returns (uint) {
-        return balance[_a];
+
     }
     function transfer(address _to, uint _amt) public override {
         require(balance[msg.sender] >= _amt);
@@ -21,7 +15,13 @@ pragma solidity >=0.8.0;
 interface Token {
    
 }
-        
+      assert(xPost == xPre - _amt);
+ TokenCorrect t = TokenCorrect(_token);  
+contract TokenCorrect is Token {
+    mapping (address => uint) balance;
+    constructor(address _a, uint _b) {
+    function balanceOf(address _a) public view override returns (uint) {
+        return balance[_a];  
     function balanceOf(address _a) external view returns (uint);
    }
    function balanceOf(address _a) external view returns (uint);
