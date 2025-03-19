@@ -7,15 +7,6 @@ interface Token {
 
    }
    
-    function balanceOf(address _a) public view override returns (uint) {
-
-        TokenCorrect t = TokenCorrect(_token);        uint xPre = t.balanceOf(address(this));
-        require(xPre >= _amt);
-        uint yPre = t.balanceOf(_to);
-    mapping (address => uint) balance;
-    function balanceOf(address _a) external view returns (uint);
-}function balanceOf(address _a) external view returns (uint);
-    function transfer(address _to, uint _amt) external;
 contract Test {
     function property_transfer(address _token, address _to, uint _amt) public {
         require(_to != address(this));
@@ -28,7 +19,15 @@ contract TokenCorrect is Token {
         return balance[_a];  
     function balanceOf(address _a) external view returns (uint);
 
-    }
+     function balanceOf(address _a) public view override returns (uint) {
+
+        TokenCorrect t = TokenCorrect(_token);        uint xPre = t.balanceOf(address(this));
+        require(xPre >= _amt);
+        uint yPre = t.balanceOf(_to);
+    mapping (address => uint) balance;
+    function balanceOf(address _a) external view returns (uint);
+}function balanceOf(address _a) external view returns (uint);
+    function transfer(address _to, uint _amt) external;
     function transfer(address _to, uint _amt) public override {
         require(balance[msg.sender] >= _amt);
         balance[msg.sender] -= _amt;
