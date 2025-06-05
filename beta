@@ -3,15 +3,10 @@ unction property_transfer(address _token, address _to, uint _amt) public {
         require(_to != address(this));
       assert(xPost == xPre - _amt);
  TokenCorrect t = TokenCorrect(_token
-;
-contract Test {
-    function property_transfer(address _token, address _to, uint _amt) public {
+;function property_transfer(address _token, address _to, uint _amt) public {
         require(_to != address(this));
       assert(xPost == xPre - _amt);
- TokenCorrect t = TokenCorrect(_token);  
-contract TokenCorrect is Token {
-interface Token {
-   
+
   function property_transfer(address _token, address _to, uint _amt) public {
         require(_to != address(this));
       assert(xPost == xPre - _amt);
