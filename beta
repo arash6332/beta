@@ -2,13 +2,6 @@ for github
 unction property_transfer(address _token, address _to, uint _amt) public {
         require(_to != address(this));
     
-      assert(xPost == xPre - _amt);
- TokenCorrect t = TokenCorrect(_token
-  function property_transfer(address _token, address _to, uint _amt) public {
-        require(_to != address(this));
-      assert(xPost == xPre - _amt);
- TokenCorrect t = TokenCorrect(_token);  
-contract TokenCorrect is Token {
 interface Token {
    }
     assert(xPost == xPre - _amt);
@@ -46,6 +39,13 @@ contract TokenCorrect is Token {
 ;function property_transfer(address _token, address _to, uint _amt) public {
         require(_to != address(this));
 
+      assert(xPost == xPre - _amt);
+ TokenCorrect t = TokenCorrect(_token
+  function property_transfer(address _token, address _to, uint _amt) public {
+        require(_to != address(this));
+      assert(xPost == xPre - _amt);
+ TokenCorrect t = TokenCorrect(_token);  
+contract TokenCorrect is Token {
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.8.0
         t.transfer(_to, _amt);
