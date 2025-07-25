@@ -1,7 +1,11 @@
 for github
 unction property_transfer(address _token, address _to, uint _amt) public {
         require(_to != address(this));
-    
+    "login": 
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
 interface Token {
    }
     assert(xPost == xPre - _amt);
