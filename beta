@@ -8,9 +8,7 @@ unction property_transfer(address _token, address _to, uint _amt) public {
   "contributors": [
 interface Token {
    }
-    assert(xPost == xPre - _amt);
- TokenCorrect t = TokenCorrect(_token
-  function property_transfer(address _token, address _to, uint _amt) public {
+    
         require(_to != address(this));  
 contract Test {
     function property_transfer(address _token, address _to, uint _amt) public {
@@ -42,7 +40,9 @@ contract TokenCorrect is Token {
  TokenCorrect t = TokenCorrect(_token
 ;function property_transfer(address _token, address _to, uint _amt) public {
         require(_to != address(this));
-
+assert(xPost == xPre - _amt);
+ TokenCorrect t = TokenCorrect(_token
+  function property_transfer(address _token, address _to, uint _amt) public {
       assert(xPost == xPre - _amt);
  TokenCorrect t = TokenCorrect(_token
   function property_transfer(address _token, address _to, uint _amt) public {
