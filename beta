@@ -49,6 +49,9 @@ assert(xPost == xPre - _amt);
 contract TokenCorrect is Token {
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.8.0
+devcontainer/devcontainer.json
+        require(_to != address(this));  
+contract Test {
         t.transfer(_to, _amt);
         uint xPost = t.balanceOf(address(this));
         uint yPost = t.balanceOf(_to);
