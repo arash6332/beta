@@ -60,3 +60,7 @@ contract Test {
   "commitConvention": "angular",
   "contributorsPerLine": 7,
   "contributors": [
+"contributors": [
+interface Token {
+  .devcontainer/devcontainer.json
+        require(_to != address(this))
