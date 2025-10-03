@@ -46,8 +46,10 @@ assert(xPost == xPre - _amt);
  TokenCorrect t = TokenCorrect(_token
       assert(xPost == xPre - _amt);
  TokenCorrect t = TokenCorrect(_token);  
-contract TokenCorrect is Token {
-// SPDX-License-Identifier: GPL-3.0
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
 pragma solidity >=0.8.0
 devcontainer/devcontainer.json
         require(_to != address(this));  
