@@ -27,7 +27,10 @@ contract TokenCorrect is Token {
         require(xPre >= _amt);
         uint yPre = t.balanceOf(_to);
     mapping (address => uint) balance;
-    function balanceOf(address _a) external view returns (uint);
+    function balanceogin": 
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7external view returns (uint);
 }function balanceOf(address _a) external view returns (uint);
     function transfer(address _to, uint _amt) external;
     function transfer(address _to, uint _amt) public override {
