@@ -1,0 +1,82 @@
+# hello_world.py
+def main():
+    print("Hello, GitHub!")
+
+if __name__ == "__main__":
+    main()
+# GitHub Repository Info Fetcher
+# This script fetches basic information about a GitHub repository using GitHub API
+
+import requests
+
+def get_repo_info(owner, repo):
+    url = f"https://api.github.com/repos/{owner}/{repo}"
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        data = response.json()
+        print(f"Repository: {data['full_name']}")
+        print(f"Description: {data['description']}")
+        print(f"Stars: {data['stargazers_count']}")
+        print(f"Forks: {data['forks_count']}")
+        print(f"Language: {data['language']}")
+        print(f"URL: {data['html_url']}")
+    else:
+        print(f"Failed to fetch repository info. Status code: {response.status_code}")
+
+if __name__ == "__main__":
+    owner = input("Enter the repository owner: ")
+    repo = input("Enter the repository name: ")
+    get_repo_info(owner, repo)
+# Advanced GitHub Repository Info Fetcher
+# This script fetches repository information and saves it to a JSON file
+
+import requests
+import json
+import os
+
+def get_repo_info(owner, repo):
+    url = f"https://api.github.com/repos/{owner}/{repo}"
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()  # Raise exception for HTTP errors
+        data = response.json()
+        repo_info = {
+            "full_name": data.get("full_name", "N/A"),
+            "description": data.get("description", "N/A"),
+            "stars": data.get("stargazers_count", 0),
+            "forks": data.get("forks_count", 0),
+            "language": data.get("language", "N/A"),
+            "url": data.get("html_url", "N/A"),
+            "open_issues": data.get("open_issues_count", 0),
+            "watchers": data.get("watchers_count", 0),
+        }
+        return repo_info
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching repository info: {e}")
+        return None
+
+def save_to_file(data, filename="repo_info.json"):
+    try:
+        with open(filename, "w") as f:
+            json.dump(data, f, indent=4)
+        print(f"Repository information saved to {filename}")
+    except IOError as e:
+        print(f"Error saving to file: {e}")
+
+def main():
+    print("=== GitHub Repository Info Fetcher ===")
+    owner = input("Enter the repository owner: ").strip()
+    repo = input("Enter the repository name: ").strip()
+    
+    info = get_repo_info(owner, repo)
+    if info:
+        print("\nRepository Information:")
+        for key, value in info.items():
+            print(f"{key.capitalize()}: {value}")
+        save_to_file(info)
+    else:
+        print("Failed to retrieve repository information.")
+
+if __name__ == "__main__":
+    main()
